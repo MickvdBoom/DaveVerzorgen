@@ -1,30 +1,25 @@
-console.log("Welkom!")
-
-var Fitheid = 50
-var Vrolijkheid = 50
-var Eten = 50
-var audio = new Audio('geluiden/rip-dave.mp3')
-
 const Trainknop = document.querySelector("#Train")
 const Aaiknop = document.querySelector("#Aai")
 const GeefEtenKnop = document.querySelector("#GeefEten")
 const StartSpelKnop = document.querySelector("#SpelStart")
 
-
+let Fitheid = 50
+let Vrolijkheid = 50
+let Eten = 50
 let updateStatus = document.querySelector ("h2")
 let davePlaatje = document.querySelector ("img")
-
-var TrainVeld = document.querySelector("#FitheidWaarde")
-var AaiVeld = document.querySelector("#VrolijkheidWaarde")
-var GeefEtenVeld = document.querySelector("#EtenWaarde")
+let TrainVeld = document.querySelector("#FitheidWaarde")
+let AaiVeld = document.querySelector("#VrolijkheidWaarde")
+let GeefEtenVeld = document.querySelector("#EtenWaarde")
+let audio = new Audio('geluiden/rip-dave.mp3')
 
 function groet(gebruiker) {
-    console.log("Hallo " + gebruiker + "! Ik ben Dave.");
+    console.log("Hallo " + gebruiker + "! Ik ben Dave.")
 }
 
 groet("Mick")
 
-function verhoogFitheid(){
+function verhoogFitheid() {
     Fitheid = Fitheid + 5
     updateFitheid()
 }
@@ -34,48 +29,48 @@ function verhoogVrolijkheid() {
     updateVrolijkheid()
 }
 
-function verhoogEten(){
+function verhoogEten() {
     Eten = Eten + 5
     updateEten ()
 }
 
-function updateFitheid (){
+function updateFitheid() {
     console.log("getal: " + Fitheid)
     TrainVeld.textContent = Fitheid
 }
 
-function updateVrolijkheid (){
+function updateVrolijkheid() {
     console.log("getal: " + Vrolijkheid)
     AaiVeld.textContent = Vrolijkheid
 }
 
-function updateEten (){
+function updateEten() {
     console.log("getal: " + Eten)
     GeefEtenVeld.textContent = Eten
 }
 
-function verlaagFitheid (){
+function verlaagFitheid() {
     Fitheid = Fitheid - 1
     setTimeout(verlaagFitheid, 1000)
     updateFitheid ()
 }
 /*Bron voor code: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously*/
 
-function verlaagVrolijkheid (){
+function verlaagVrolijkheid() {
     Vrolijkheid = Vrolijkheid - 1
     setTimeout(verlaagVrolijkheid, 1000)
     updateVrolijkheid ()
 }
 /*Bron voor code: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously*/
 
-function verlaagEten (){
+function verlaagEten() {
     Eten = Eten - 1
     setTimeout(verlaagEten, 1000)
     updateEten ()
 }
 /*Bron voor code: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously*/
 
-function checkStatus (){
+function checkStatus() {
     if (Fitheid, Vrolijkheid, Eten > 20){
     console.log("Goed bezig! Dave is blij!")
     updateStatus.textContent = "Goed bezig! Dave is blij!"
@@ -99,14 +94,16 @@ function checkStatus (){
 }
 /*Bron voor code: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously*/
 
-function startSpel () {
+function startSpel() {
     verlaagFitheid ()
     verlaagVrolijkheid ()
     verlaagEten ()
     checkStatus ()
+    verberg ()
 }
 
-function verberg () {
+function verberg() {
+    StartSpelKnop.remove()
 
 }
 
