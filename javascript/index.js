@@ -93,6 +93,7 @@ function checkStatus() {
     setTimeout(checkStatus, 1000)
 }
 /*Bron voor code: https://stackoverflow.com/questions/7188145/call-a-javascript-function-every-5-seconds-continuously*/
+/*Bron voor code: https://stackoverflow.com/questions/9419263/how-to-play-audio*/
 
 function startSpel() {
     verlaagFitheid ()
