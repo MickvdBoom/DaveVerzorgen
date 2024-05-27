@@ -104,7 +104,6 @@ function startSpel() {
 
 function verberg() {
     StartSpelKnop.remove()
-
 }
 
 Trainknop.addEventListener('click', verhoogFitheid)
