@@ -1,9 +1,24 @@
+body {
+    background-color: #cccccc;
+}
+
 h1 {
     text-align: center;
 }
 
 h2 {
     text-align: center;
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {
@@ -17,11 +32,6 @@ p {
     border-radius: 10px;
 }
 
-p:hover {
-    background-color: white;
-    color: black;
-}
-
 img {
     max-height: 400px;
     display: block;
@@ -31,8 +41,9 @@ img {
     margin-bottom: 50px;
 }
 
-body {
-    background-color: #cccccc;
+p:hover {
+    background-color: white;
+    color: black;
 }
 
 .opties-dave {
@@ -48,20 +59,6 @@ body {
 
 .Waardes {
     display: flex;
-}
-
-h2 {
-    display: block;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h3 {
-    display: block;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .Dave-knoppen {
